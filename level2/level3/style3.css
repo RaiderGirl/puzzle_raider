@@ -1,0 +1,183 @@
+body{
+    background-color: rgb(74, 114, 86);
+    display: grid; 
+    place-items: center;
+    justify-content: center; 
+    align-items:center;
+}
+
+
+
+#logo{
+    display: grid;
+    position:relative;
+  /*  display: block; */
+    width: 600px;
+    height: 300px;
+    background-image:url(puzzle_raider_logo_4.png);
+    background-repeat:no-repeat;
+  }
+
+
+#number{
+font-size: 20pt;
+}
+
+
+
+
+#tab_grid {
+    width: 420px;
+    height: 420px;
+   /* border: 1px solid black;  */
+    display: grid;
+    grid-template-columns: auto auto auto;  
+    padding: 1px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.clks {
+    height: 140px;
+    width: 140px;
+    font-size: 0.1px;
+}
+
+
+#p11 {
+    background: url(11.jpg);
+}
+
+#p12 {
+    background: url(12.jpg);
+}
+
+#p13 {
+    background: url(13.jpg);
+}
+
+#p21 {
+    background: url(21.jpg);
+}
+
+#p22 {
+    background: url(22.jpg);
+}
+
+#p23 {
+    background: url(23.jpg);
+}
+
+#p31 {
+    background: url(31.jpg);
+}
+
+#p32 {
+    background: url(32.jpg);
+}
+
+#p33 {
+    background: url(33.jpg);
+}
+
+
+
+#buttons{
+    display: flex;
+    margin-top: 30px;
+  }
+  
+  #launch {
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    background-color:transparent; 
+    color: black;
+    border-radius:12px;
+    font-size: 15pt;
+  
+  } 
+  #launch:hover {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    color: #ffffff;
+  }
+  
+  
+  #next {
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    background-color:transparent; 
+    color: black;
+    border-radius:12px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15pt;
+  } 
+  #next:hover {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    color: #ffffff;
+  }
+  
+  
+  #music {
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    background-color:transparent; 
+    color: black;
+    border-radius:12px;
+    font-size: 15pt;
+  
+  } 
+  #music:hover {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    color: #ffffff;
+  }
+
+
+
+
+/*
+
+#launch {
+    width: 170px;
+    margin:auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    height: 40px;
+    border-radius:  5px;
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    background-color: brown;
+    box-shadow: 0px 0px 20px white;
+    text-shadow: 0px 0px 10px white;
+    cursor: pointer;
+    font-family: 'Arial';
+    font-size: 25px;
+}
+
+#launch:hover {
+    color: thistle;
+    text-shadow: 0px 0px 10px #BA6F00;
+}
+
+
+#moves {
+    width: 220px;
+    margin:auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    height: 80px;
+    border-radius:  5px;
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    background-color: brown;
+    box-shadow: 0px 0px 20px white;
+    text-shadow: 0px 0px 10px white;
+    cursor: pointer;
+    font-family: 'Arial';
+    font-size: 25px;
+}  */
