@@ -6,11 +6,12 @@
     </head>
 <body>
 
-	<div id="logo"></div>   
+	<div id="logo"></div>     <!--  this is the logo picture   -->
 
-    <div id="number">1/10</div>   
+    <div id="number">1/10</div>       <!--  this show which level you're currently playing   -->
     
-    <div id="tab_grid">
+
+    <div id="tab_grid">    <!--  this is the gameboard where the tiles are aligned   -->
         <div class="clks" id="p11" onclick="switching('p11');">11</div>
         <div class="clks" id="p12" onclick="switching('p12');">12</div>
         <div class="clks" id="p13" onclick="switching('p13');">13</div>
@@ -22,24 +23,26 @@
         <div class="clks" id="p33" onclick="switching('p33');">33</div>
     </div>
 
-    <div id="buttons">
-        <button id="launch" onclick="start_game(); launchsound.play();">start</button>
-         <a href="javascript:delay('level2/level2.html')"><button id="next">next</button> </a>
-          <button id="music" >music</button>
+    <div id="buttons">   
+        <button id="launch" onclick="start_game(); launchsound.play();">shuffle</button>  <!--  this button shuffles the board and plays a sound when clicked   -->
+         <a href="javascript:delay('level2/level2.html')"><button id="next">next</button> </a>  <!--  this button takes you to the next lvl via a link   -->
+          <button id="music" >music</button>  <!--  this button starts and stops the music   -->
       </div>
 
 
 
 
-      <audio id = "TRmusic">
+      <audio id = "TRmusic">  <!--  this is my music file   -->
         <source src="TR2_music.mp3" type="audio/mp3">
       </audio>
   
-      <script>
+
+<!--  this is the play/pause function -->
+      <script> 
           var music = document.getElementById("TRmusic");
           var music = document.getElementById("music");
   
-          music.onclick = function(){
+          music.onclick = function(){     
             if(TRmusic.paused){
                  TRmusic.play();
             }else{
@@ -49,6 +52,7 @@
       </script>
 
 
+<!--  this is the shuffle sound -->
 
 <audio id = "launchsound">
     <source src="menu3.wav" type="audio/wav">
@@ -60,6 +64,7 @@
 </script>  
 
 
+<!--  this is the sound for the next button -->
 
 <audio id = "nextsound">
     <source src="magnum.wav" type="audio/wav">
@@ -75,12 +80,13 @@
       </script>
 
 
+<!--  this is the sound for the win situation -->
 <audio id = "secret">
   <source src="secret.mp3" type="audio/mp3">
 </audio>
 
 
-
+<!--  this is a delay for the next lvl load so the "next button" sound can play before the page loads -->
   <script>
     function delay (URL) {
     setTimeout( function() { window.location = URL }, 600 );
