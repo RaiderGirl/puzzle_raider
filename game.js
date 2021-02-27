@@ -1,4 +1,10 @@
 
+//the page loads with a fixed tile array to show the pictures how it's supposed to look like in the end
+
+
+
+//this function shuffles the tiles and therefore starts the game
+
 function start_game() {
      var tab_position = new Array();
      while(tab_position.length <9) {
@@ -14,6 +20,11 @@ function start_game() {
             }  
         }
      }
+
+            //the tile movement works by setting a fixed "skeleton" grid of tiles. then each tiles has a value (for example p11) and is combined with the correlating image set in the css file.
+            //the "skeleton" grid always stays in the same order, it never changes
+            //the p-values and linked images can then be moved by clicking them but only if they are touching a blank tile
+
 
     document.getElementById('p11').textContent = tab_position[0];
     document.getElementById('p11').style.background = 'url('+tab_position[0]+'.jpg)'; 
@@ -46,6 +57,10 @@ function start_game() {
 
 var secret = new Audio('secret.mp3');
 
+
+//this function checks whether or not the game has been won by checking if the elements are in order
+
+
 function check_win(){
     var cell1 = document.getElementById('p11').textContent;
     var cell2 = document.getElementById('p12').textContent;
@@ -76,20 +91,22 @@ function check_win(){
    
 }  
 
-
+//this function makes the clicked tile swap images with the touching blank tile
 
 function swapper(blankCell, clickedCell) {
     var temp_val = document.getElementById(blankCell).textContent;
     document.getElementById(blankCell).textContent = document.getElementById(clickedCell).textContent;
     document.getElementById(clickedCell).textContent = temp_val;
-    document.getElementById(clickedCell).style.background = 'url('+document.getElementById(clickedCell).textContent+'.jpg)';  //make your background equal to your value (become the blank)
-    document.getElementById(blankCell).style.background = 'url('+document.getElementById(blankCell).textContent+'.jpg)';  //make your background equal to your value (corresponding image)
+    document.getElementById(clickedCell).style.background = 'url('+document.getElementById(clickedCell).textContent+'.jpg)';  //this tells the tile: make your background equal to your value (=become the blank)
+    document.getElementById(blankCell).style.background = 'url('+document.getElementById(blankCell).textContent+'.jpg)';  //this also tells the tile to make it's background equal to it's value (corresponding image)
 }
+
+//this funkction sets the switching option for each tile and makes sure the clicked tile can only swap images with the blank tile touching it
 
 function switching(cell) {
     if(document.getElementById(cell).textContent != '33') { 
         switch (cell){
-            case 'p11':
+            case 'p11':   //tile p11 (the top left corner tile) has only 2 touching tiles, so only two if states are needed; the next tile has 3 touching tiles and so on...
                         if(document.getElementById('p12').textContent == '33') {  
                             swapper('p12', cell);
                         }
@@ -211,9 +228,9 @@ function switching(cell) {
                             swapper('p32', cell);
                         }
 
-                        if(check_win()){
-                            secret.play();
-                        }
+                        if(check_win()){        //this is how the "secret" audio is played when you win the game.
+                            secret.play();      //i placed it here because the blank tile needs to be in the buttom right corner (so the tile p33) for the win situation to be true
+                        }                       //fun fact: you can play that sound even before you shuffle the game by moving one tile back and forth because i forgot to set up a "game started" condition and link them
 
                     }
                 }

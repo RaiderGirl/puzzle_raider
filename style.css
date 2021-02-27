@@ -23,7 +23,7 @@ font-size: 20pt;
 }
 
 
-
+/* this is how i made the game board align in 3x3 */
 
 #tab_grid {
     width: 420px;
@@ -35,12 +35,15 @@ font-size: 20pt;
     margin-top: 20px;
 }
 
+/* this sets up the tile size */
+
 .clks {
     height: 140px;
     width: 140px;
     font-size: 0.1px;
 }
 
+/* this links the corresponding images to the values of the tiles that come to work in the java*/
 
 #p11 {
     background: url(11.jpg);
@@ -79,6 +82,7 @@ font-size: 20pt;
 }
 
 
+/* all my buttons*/
 
 #buttons{
     display: flex;
