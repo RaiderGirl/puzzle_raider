@@ -3,7 +3,7 @@
 
 
 
-//this function shuffles the tiles and therefore starts the game
+//this function shuffles the tiles randomly 
 
 function start_game() {
      var tab_position = new Array();
